@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>CRUD de Usuários <small>CIAg</small></h1>
+    <hr/>
+    <div class="row">
+        <form class="form form-inline col-xs-10 col-sm-10 col-md-10 col-lg-10" role="search">
+            <div class="form-group">
+                <label for="user-search">Busca:</label>
+                <div class="input-group">
+                    <input id="user-search" class="form-control" ng-model="query" />
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <a class="btn btn-success" href="#/users/add" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <span class="hidden-xs hidden-sm">Novo Usuário</span>
+            <span class="glyphicon glyphicon-plus" ></span>
+        </a>
+    </div>
+    <table class="row table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    E-Mail
+                </th>
+                <th class="text-center">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users| filter:query ">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td class="text-center">
+                    <a class="btn btn-primary" href="#/users/{{user.id}}">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <button ng-click="delete(user)" class="btn btn-danger" href="#">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
