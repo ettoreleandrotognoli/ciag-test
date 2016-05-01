@@ -1,0 +1,29 @@
+{
+  "name": "ciag",
+  "description": "ciag test",
+  "main": "src/main/webapp/scripts/main.js",
+  "keywords": [
+    "ciag",
+    "test"
+  ],
+  "authors": [
+    "ettore leandro tognoli"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "angular": "angularjs#^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.5",
+    "angular-resource": "^1.5.5"
+  }
+}
